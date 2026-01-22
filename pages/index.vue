@@ -1,6 +1,7 @@
 <template>
   <div class="flex flex-col gap-3">
-    <MIndexNew />
+    <div>我是header</div>
+    <NuxtPage />
   </div>
 </template>
 

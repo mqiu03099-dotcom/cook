@@ -1,7 +1,7 @@
 <template>
   <div class="w-full h-dvh flex justify-center items-center">
     <div
-      class="max-w-70 w-full h-50 bg-white/20 rounded-2xl flex-col gap-3 font-bold flex justify-center items-center"
+      class="max-w-70 w-full h-50 bg-white/20 backdrop-blur-sm rounded-2xl flex-col gap-3 font-bold flex justify-center items-center"
     >
       <div
         class="text-2xl"
@@ -11,7 +11,7 @@
       </div>
       <MA href="/">
         <button
-          class="px-4! py-2! hover:scale-105 rounded-2xl bg-purple-400 cursor-pointer hover:bg-purple-500 transition-all"
+          class="px-4! py-2! hover:scale-105 rounded-2xl bg-[#00d1d1]/80 cursor-pointer hover:bg-[#00d1d1] transition-all"
         >
           BACK
         </button>
