@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+          <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+          
+                <url>
+                  <loc>https://cook.vip/</loc>
+                  <changefreq>weekly</changefreq>
+                  <priority>1</priority>
+                  <lastmod>2026-01-17T13:58:49.416Z</lastmod>
+                </url>
+              
+                <url>
+                  <loc>https://cook.vip/about/</loc>
+                  <changefreq>weekly</changefreq>
+                  <priority>0.6</priority>
+                  <lastmod>2026-01-17T13:58:49.416Z</lastmod>
+                </url>
+              
+                <url>
+                  <loc>https://cook.vip/contact/</loc>
+                  <changefreq>weekly</changefreq>
+                  <priority>0.6</priority>
+                  <lastmod>2026-01-17T13:58:49.416Z</lastmod>
+                </url>
+              
+                <url>
+                  <loc>https://cook.vip/privacy/</loc>
+                  <changefreq>weekly</changefreq>
+                  <priority>0.6</priority>
+                  <lastmod>2026-01-17T13:58:49.416Z</lastmod>
+                </url>
+              
+        </urlset>

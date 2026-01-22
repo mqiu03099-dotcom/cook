@@ -1,0 +1,27 @@
+{
+  "name": "cook",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "buildPro": "nuxt build --dotenv .env.production",
+    "buildDev": "nuxt build --dotenv .env.development",
+    "dev": "nuxt dev --dotenv .env.development",
+    "pro": "nuxt dev --dotenv .env.production",
+    "publishDev": "echo 🔄🔄🔄开始打包构建 && pnpm buildDev && cd dist && http-server",
+    "publishPro": "echo 🔄🔄🔄开始打包构建 && pnpm buildPro && cd dist && http-server",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "nuxt": "3.17.5",
+    "vue": "3.5.18",
+    "vue-router": "4.5.1",
+    "wrangler": "4.53.0"
+  },
+  "packageManager": "pnpm@8.15.0",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "tailwindcss": "^4.1.18"
+  }
+}
