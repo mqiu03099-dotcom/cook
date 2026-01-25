@@ -13,11 +13,6 @@ export default defineNuxtConfig({
         const sitemapUrls = await readPublicSubFolders();
         const uriObj = {
           "": 1.0,
-          search: 0.8,
-          category: 0.8,
-          tag: 0.8,
-          menu: 0.8,
-          theme: 0.7,
           about: 0.6,
           contact: 0.6,
           privacy: 0.6,
@@ -145,7 +140,7 @@ export default defineNuxtConfig({
       cssCodeSplit: false, // 关闭 css 代码分割，生成单一样式表方便抓取
       chunkSizeWarningLimit: 100, // 构建时超过这个阈值的文件打包会标黄
       reportCompressedSize: true, // 构建时是否生成 gzip 压缩包
-      assetsInlineLimit: 0, // 10000=10kb，当静态资源小于10kb时候，会被转换为base64打入js文件
+      assetsInlineLimit: 50000, // 10000=10kb，当静态资源小于10kb时候，会被转换为base64打入js文件
     },
   },
   css: ["@/public/app.css"],

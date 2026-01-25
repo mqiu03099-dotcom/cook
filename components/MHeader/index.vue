@@ -6,8 +6,10 @@
     >
       <MImg
         :src="logo"
-        class="size-9"
+        class="size-9 rounded-none!"
         alt="logo"
+        :bgwhite="false"
+        :rounded="false"
       />
       <h1 class="text-3xl font-bold capitalize">{{ defaultTitle }}</h1>
     </MA>
