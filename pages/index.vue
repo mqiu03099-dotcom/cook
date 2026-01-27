@@ -1,7 +1,9 @@
 <template>
-  <div class="flex flex-col gap-3">
+  <div class="flex flex-col gap-3 h-dvh overflow-hidden">
     <MIndexaHeader />
-    <NuxtPage />
+    <div class="flex-1 w-full overflow-auto">
+      <NuxtPage />
+    </div>
   </div>
 </template>
 

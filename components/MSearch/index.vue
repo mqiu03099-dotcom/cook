@@ -7,10 +7,7 @@
       alt="menu"
       :bgwhite="false"
       :rounded="false"
-      :class="[
-        'size-5 md:hidden! cursor-pointer transform transition-all',
-        getShowNav ? 'rotate-180' : '',
-      ]"
+      class="size-5 md:hidden! cursor-pointer"
       @click="handleShowNav"
     />
     <p class="flex-1 text-center md:text-left">鱼香肉丝</p>

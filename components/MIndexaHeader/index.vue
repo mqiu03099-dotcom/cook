@@ -4,7 +4,7 @@
   >
     <MA
       href="/"
-      class="shrink-0 mr-auto flex items-center gap-2 text-xl font-bold"
+      class="shrink-0 mr-auto flex items-center gap-2 font-bold"
     >
       <MImg
         :src="logo"
