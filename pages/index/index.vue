@@ -12,36 +12,91 @@
         每日更新 ❤️ 优质食谱
       </div>
     </div>
-    <div
-      class="w-full relative p-9 lg:p-18 gap-9 grid place-items-center grid-cols-[repeat(auto-fill,minmax(300px,1fr))] bg-center bg-cover bg-no-repeat"
-      :style="{ backgroundImage: `url(${indexBg2})` }"
-    >
-      <MA
-        :href="href"
-        v-for="({ href, icon1, name }, index) in menu"
-        :key="index"
-        blank
-        class="w-full h-50 group flex-col bg-black/20 hover:border-2 shadow hover:backdrop-blur-md transition-all border-[#00d1d1] rounded-2xl font-medium text-2xl flex items-center justify-center gap-3 backdrop-blur-sm"
-      >
-        <div class="size-12 flex justify-center items-center">
+    <div class="w-full flex flex-col gap-9 p-9">
+      <div class="flex gap-9 flex-wrap items-center justify-center">
+        <div
+          :href="href"
+          v-for="({ href, icon1, name }, index) in menu"
+          :key="index"
+          blank
+          @click="handleSelectMenu(index)"
+          class="group cursor-pointer flex flex-col justify-center items-center text-xl gap-6"
+        >
+          <div
+            class="size-30 flex justify-center items-center shadow bg-black/20 rounded-2xl border-[#00d1d1]"
+          >
+            <MImg
+              :src="icon1"
+              class="size-20"
+              :bgwhite="false"
+              :rounded="false"
+            />
+          </div>
+          <div
+            :class="[
+              'group-hover:text-[#00d1d1] border-2 border-transparent group-hover:border-[#00d1d1] px-4 rounded-2xl py-1',
+              index === activeIndex ? 'border-2 border-[#00d1d1]! text-[#00d1d1]' : '',
+            ]"
+          >
+            {{ name }}
+          </div>
+        </div>
+      </div>
+      <div class="flex gap-9 flex-wrap min-h-60 justify-center w-full">
+        <div class="flex flex-col gap-6">
+          <div class="font-bold text-xl">{{ menuSelectContent?.name }}</div>
+          <div>{{ menuSelectContent?.description }}</div>
+          <ul class="flex flex-col gap-3">
+            <li
+              v-for="(item, index) in menuSelectContent?.tag || []"
+              :key="index"
+              class="flex items-center gap-3"
+            >
+              <div class="size-3 rounded-full bg-[#00d1d1]"></div>
+              <div>{{ item }}</div>
+            </li>
+          </ul>
+        </div>
+        <div class="relative flex justify-center items-center min-w-60 w-full max-w-150 h-60">
           <MImg
-            :src="icon1"
-            class="size-10 group-hover:size-12 transition-all"
-            :bgwhite="false"
-            :rounded="false"
+            :src="menuSelectContent?.bgImgs?.[0]"
+            class="absolute left-0 top-0 size-full"
           />
+          <MA
+            :href="menuSelectContent?.href"
+            class="px-6 py-3 bg-[#00d1d1]/20 hover:bg-[#00d1d1] justify-center flex items-center gap-2 backdrop-blur-sm font-bold text-center rounded-2xl"
+          >
+            <MImg
+              :src="study"
+              class="size-6"
+              :bgwhite="false"
+              :rounded="false"
+            />
+            <div>了解更多</div>
+          </MA>
         </div>
-        <div class="group-hover:text-[#00d1d1] group-hover:font-bold">
-          {{ name }}
-        </div>
-      </MA>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import indexBg from "@/public/index-bg.webp";
-import indexBg2 from "@/public/index-bg-2.png";
+import study from "@/public/study.png";
+
+const activeIndex = ref<number>(0);
+const menuSelectContent = ref<CuisineType | undefined>(
+  menu[activeIndex.value]?.children?.[0]?.children?.[0],
+);
+
+/**
+ * 选中某个菜单
+ * @param index
+ */
+const handleSelectMenu = (index: number) => {
+  activeIndex.value = index;
+  menuSelectContent.value = menu[index]?.children?.[0]?.children?.[0];
+};
 </script>
 
 <style scoped>
