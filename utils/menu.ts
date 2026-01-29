@@ -13,10 +13,15 @@ export const menu: CuisineType[] = [
     icon: lucai,
     icon1: lucai1,
     href: "/shandong/jinan",
+    description:
+      "鲁菜是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是",
     children: [
       {
         name: "济南菜",
         href: "/shandong/jinan",
+        icon: lucai,
+        icon1: lucai1,
+        description: "济南经典名菜，造型优美，外酥里嫩，酸甜适口",
         children: [
           {
             name: "糖醋鲤鱼",
@@ -109,10 +114,15 @@ export const menu: CuisineType[] = [
     icon: chuancai,
     icon1: chuancai1,
     href: "/sichuan/spicy",
+    description:
+      "川菜是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是",
+
     children: [
       {
         name: "麻辣菜",
         href: "/sichuan/spicy",
+        icon: chuancai,
+        icon1: chuancai1,
         children: [
           {
             name: "水煮鱼",
@@ -145,6 +155,11 @@ export const menu: CuisineType[] = [
       {
         name: "香辣菜",
         href: "/sichuan/aromatic",
+        icon: chuancai,
+        icon1: chuancai1,
+        description:
+          "香辣菜是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是",
+
         children: [
           {
             name: "辣子鸡",
@@ -179,6 +194,9 @@ export const menu: CuisineType[] = [
     icon: yuecai,
     icon1: yuecai1,
     href: "/cantonese/guangzhou",
+    description:
+      "粤菜是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是",
+
     children: [
       {
         name: "广府菜",
@@ -248,6 +266,8 @@ export const menu: CuisineType[] = [
     icon: sucai,
     icon1: sucai1,
     href: "/jiangsu/huaiyang",
+    description:
+      "苏菜是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常，是chy的日常",
     children: [
       {
         name: "淮扬菜",
